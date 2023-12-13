@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Information</title>
+    <style>
+        /* Styles remain the same */
+    </style>
+</head>
+<body>
+    <h1>Pet Information Form</h1>
+    <form id="petForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="age">Age:</label>
+        <input type="text" id="age" name="age" required>
+
+        <label for="weight">Weight (in pounds):</label>
+        <input type="text" id="weight" name="weight" required>
+
+        <label for="type">Type:</label>
+        <select id="type" name="type" required>
+            <option value="Dog">Dog</option>
+            <option value="Cat">Cat</option>
+            <option value="Bird">Bird</option>
+            <option value="Other">Other</option>
+        </select>
+
+        <label for="likes">What does it like most?</label>
+        <input type="text" id="likes" name="likes" required>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.getElementById('petForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const age = document.getElementById('age').value;
+            const weight = document.getElementById('weight').value;
+            const type = document.getElementById('type').value;
+            const likes = document.getElementById('likes').value;
+
+            const pet = {
+                name: name,
+                age: age,
+                weight: weight,
+                type: type,
+                likes: likes
+            };
+
+            console.log('Pet Object:', pet);
+            console.log('Pet Object as JSON:', JSON.stringify(pet));
+        });
+    </script>
+</body>
+</html>
