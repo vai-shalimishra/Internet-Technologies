@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Style Changer</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 5px;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            text-align: center;
+            padding: 10px;
+            border: 1px solid #ccc;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <p id="paragraph">This is a sample paragraph.</p>
+
+    <div class="grid-container">
+        <button class="grid-item" onclick="changeColor('red')">Red</button>
+        <button class="grid-item" onclick="changeColor('green')">Green</button>
+        <button class="grid-item" onclick="changeColor('blue')">Blue</button>
+        <button class="grid-item" onclick="changeFontSize(10)">10</button>
+        <button class="grid-item" onclick="changeFontSize(20)">20</button>
+        <button class="grid-item" onclick="changeFontSize(30)">30</button>
+        <button class="grid-item" onclick="changeFont('Arial')">Arial</button>
+        <button class="grid-item" onclick="changeFont('Times New Roman')">Times New Roman</button>
+        <button class="grid-item" onclick="changeFont('Verdana')">Verdana</button>
+    </div>
+
+    <script>
+        function changeColor(color) {
+            document.getElementById('paragraph').style.color = color;
+        }
+
+        function changeFontSize(size) {
+            document.getElementById('paragraph').style.fontSize = size + 'px';
+        }
+
+        function changeFont(fontName) {
+            document.getElementById('paragraph').style.fontFamily = fontName;
+        }
+    </script>
+</body>
+</html>
