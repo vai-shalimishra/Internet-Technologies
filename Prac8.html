@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>B.Sc. Hons CS Course</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        /* Basic styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        #styleButton {
+            display: block;
+            margin: 30px auto;
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>B.Sc. Hons Computer Science Course</h1>
+    <div id="content">
+        <h2>Details:</h2>
+        <ul>
+            <li><strong>Fee:</strong> 33000 per semester</li>
+            <li><strong>Eligibility Criteria:</strong> 10+2</li>
+            <li>
+                <strong>Papers with Names and Credits:</strong>
+                <ul>
+                    <li>C++- Credits: 6</li>
+                    <li>Java - Credits: 6</li>
+                    <li>TOC - Credits: 4</li>
+                    <li>Total 16 papers </li>
+
+                    <!-- Add more papers as needed -->
+                </ul>
+            </li>
+            <li><strong>Future Possibilities:</strong>Software Developer</li>
+        </ul>
+    </div>
+
+    <button id="styleButton">Click to Style</button>
+
+    <script>
+        $(document).ready(function() {
+            $('#styleButton').on('click', function() {
+                // jQuery to restyle the page
+                $('#content').css({
+                    'background-color': '#f4f4f4',
+                    'padding': '20px',
+                    'border-radius': '5px',
+                    'box-shadow': '0 2px 5px rgba(0, 0, 0, 0.1)'
+                });
+                $('h1, h2, li').css({
+                    'color': '#333'
+                });
+                $('body').css({
+                    'background-color': '#e9e9e9'
+                });
+                $('#styleButton').fadeOut();
+            });
+        });
+    </script>
+</body>
+</html>
+
